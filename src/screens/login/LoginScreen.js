@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import CommonSafeAreaViewComponent from '../../components/CommonSafeAreaViewComponent';
 import styles from './styles';
@@ -12,7 +12,7 @@ import CommonButtonComponent from '../../components/CommonButtonComponent';
 import DividerWithText from '../../components/DividerWithTextComponent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -89,9 +89,11 @@ export default function LoginScreen() {
               Typografie Durch die Fortsetzung stimmen Sie den
               Nutzungsbedingungen und der Datenschutzrichtlinie von App Name zu.
             </Text>
-            <Text style={styles.signupText}>
-              Haben Sie noch kein Konto? Jetzt registrieren!
-            </Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+              <Text style={styles.signupText}>
+                Haben Sie noch kein Konto? Jetzt registrieren!
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>

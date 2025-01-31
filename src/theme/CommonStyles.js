@@ -7,10 +7,15 @@ const CommonStyles = StyleSheet.create({
   alignItemsCenter: {alignItems: 'center'},
 
   // padding top
+  paddingTop2: {paddingTop: wp(2)},
+  paddingTop3: {paddingTop: wp(3)},
+
   paddingTop5: {paddingTop: wp(5)},
   paddingTop8: {paddingTop: wp(8)},
   paddingTop10: {paddingTop: wp(10)},
 
+  // margin Vertical
+  marginVertical5: {marginVertical: wp(5)},
   // margin right
   marginRight3: {marginRight: wp(3)},
 
@@ -49,8 +54,8 @@ const CommonStyles = StyleSheet.create({
     width: wp(90),
   },
   inputLabel: {
-    fontSize: wp(4),
-    fontWeight: '500',
+    fontSize: wp(3.5),
+    fontWeight: '400',
     color: Colors.blackColor,
     marginBottom: wp(2),
   },
@@ -72,7 +77,7 @@ const CommonStyles = StyleSheet.create({
   },
   inputField: {
     flex: 1,
-    fontSize: wp(4),
+    fontSize: wp(3.5),
     color: Colors.blackColor,
   },
   inputIcon: {

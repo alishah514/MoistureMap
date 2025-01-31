@@ -15,8 +15,9 @@ const CommonInputFieldComponent = ({
   image,
   vectorIcon,
   required = false,
-  validationType, // 'email', 'password', 'custom'
+  validationType, // 'email', 'password', 'confirmPassword', 'custom'
   customValidation, // Custom validation function
+  confirmPassword, // for confirmPassword validation
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(!secureTextEntry);
@@ -34,6 +35,11 @@ const CommonInputFieldComponent = ({
       }
     } else if (validationType === 'password' && text.length < 6) {
       errorMsg = 'Passwort muss mindestens 6 Zeichen enthalten';
+    } else if (
+      validationType === 'confirmPassword' &&
+      text !== confirmPassword
+    ) {
+      errorMsg = 'Das Passwort stimmt nicht überein';
     } else if (validationType === 'custom' && customValidation) {
       errorMsg = customValidation(text);
     }

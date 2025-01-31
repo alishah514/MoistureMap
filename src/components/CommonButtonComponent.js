@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import CommonStyles from '../theme/CommonStyles';
 import {Colors} from '../theme/Colors';
+import {wp} from '../theme/Dimensions';
 
 export default function CommonButtonComponent({
   title,
@@ -40,7 +41,12 @@ export default function CommonButtonComponent({
   ];
 
   const textStyles = [
-    CommonStyles.lessBold5,
+    {
+      fontWeight: '500',
+      fontSize: wp('4'),
+      maxWidth: wp(65),
+      textAlign: 'center',
+    },
     {
       color: outlined
         ? titleColor || Colors.blueColor
@@ -64,7 +70,9 @@ export default function CommonButtonComponent({
           </>
         )}
 
-        <Text style={textStyles}>{title}</Text>
+        <Text style={textStyles} numberOfLines={1} ellipsizeMode="tail">
+          {title}
+        </Text>
 
         {iconPosition === 'right' && (
           <>
