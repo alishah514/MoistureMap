@@ -12,7 +12,7 @@ import CommonButtonComponent from '../../components/CommonButtonComponent';
 import DividerWithText from '../../components/DividerWithTextComponent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default function RegisterScreen() {
+export default function RegisterScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
 
@@ -23,7 +23,7 @@ export default function RegisterScreen() {
     <CommonSafeAreaViewComponent>
       <ScrollView contentContainerStyle={CommonStyles.marginVertical5}>
         <View style={styles.container}>
-          <View style={{alignSelf: 'flex-start', paddingLeft: wp(5)}}>
+          <View style={styles.registerTitleView}>
             <Text style={styles.appTitle}>Ein Konto erstellen</Text>
             <Text style={styles.loginDescription}>
               Geben Sie Ihre Kontodaten ein
@@ -87,7 +87,7 @@ export default function RegisterScreen() {
 
             <CommonButtonComponent
               title={'Fortfahren'}
-              onPress={() => console.log('abxc')}
+              onPress={() => navigation.navigate('Verification')}
               style={{marginTop: wp(3)}}
               vectorIcon={
                 <Ionicons

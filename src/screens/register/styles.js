@@ -8,27 +8,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  dropImage: {
-    width: wp(10),
-    height: wp(10),
-    resizeMode: 'contain',
-    marginRight: wp(2),
-  },
-  appTitleView: {
-    flexDirection: 'row',
-    alignSelf: 'center',
-    alignItems: 'center',
-  },
   appTitle: {
     fontWeight: '600',
     fontSize: wp(7),
     color: Colors.blackColor,
   },
-  loginTitle: {
-    fontWeight: '600',
-    fontSize: wp(6),
-    color: Colors.blackColor,
-  },
+  registerTitleView: {alignSelf: 'flex-start', paddingLeft: wp(5)},
+
   loginDescription: {
     fontWeight: '400',
     fontSize: wp(4),
@@ -37,7 +23,6 @@ const styles = StyleSheet.create({
     paddingTop: wp(3),
     lineHeight: wp(6),
   },
-  formView: {paddingTop: wp(8), alignItems: 'center', width: wp(90)},
   rightArrowStyle: {position: 'absolute', right: -100},
   bottomDescriptionView: {marginBottom: wp(3), width: wp(90)},
   bottomDescriptionText: {

@@ -5,11 +5,10 @@ import {hp, wp} from './Dimensions';
 const CommonStyles = StyleSheet.create({
   container: {flex: 1, backgroundColor: Colors.whiteColor},
   alignItemsCenter: {alignItems: 'center'},
-
+  textAlignCenter: {textAlign: 'center'},
   // padding top
   paddingTop2: {paddingTop: wp(2)},
   paddingTop3: {paddingTop: wp(3)},
-
   paddingTop5: {paddingTop: wp(5)},
   paddingTop8: {paddingTop: wp(8)},
   paddingTop10: {paddingTop: wp(10)},
