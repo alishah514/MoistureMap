@@ -12,6 +12,7 @@ const CommonStyles = StyleSheet.create({
   paddingTop5: {paddingTop: wp(5)},
   paddingTop8: {paddingTop: wp(8)},
   paddingTop10: {paddingTop: wp(10)},
+  paddingTop15: {paddingTop: wp(15)},
 
   // margin Vertical
   marginVertical5: {marginVertical: wp(5)},

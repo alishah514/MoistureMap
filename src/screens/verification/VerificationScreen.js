@@ -16,7 +16,7 @@ import {Colors} from '../../theme/Colors';
 
 const CELL_COUNT = 5;
 
-export default function VerificationScreen() {
+export default function VerificationScreen({navigation}) {
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -24,7 +24,6 @@ export default function VerificationScreen() {
     setValue,
   });
 
-  // Disable button if all fields are not filled
   const isButtonDisabled = value.length < CELL_COUNT;
 
   return (
@@ -65,7 +64,7 @@ export default function VerificationScreen() {
 
             <CommonButtonComponent
               title={'Code überprüfen'}
-              onPress={() => console.log('abxc')}
+              onPress={() => navigation.navigate('Location')}
               style={[
                 CommonStyles.marginVertical5,
                 {
