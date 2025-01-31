@@ -27,7 +27,7 @@ export default function LocationScreen({navigation}) {
       <View style={styles.buttonContainer}>
         <CommonButtonComponent
           title={'Standortzugriff erlauben'}
-          onPress={() => navigation.navigate('NextScreen')}
+          onPress={() => navigation.navigate('MainMap')}
         />
       </View>
       <View style={styles.buttonContainer}>

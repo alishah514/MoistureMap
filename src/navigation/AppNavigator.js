@@ -6,6 +6,7 @@ import EntryScreen from '../screens/entry/EntryScreen';
 import RegisterScreen from '../screens/register/RegisterScreen';
 import VerificationScreen from '../screens/verification/VerificationScreen';
 import LocationScreen from '../screens/location/LocationScreen';
+import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const AppNavigator = () => {
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Verification" component={VerificationScreen} />
       <Stack.Screen name="Location" component={LocationScreen} />
+      <Stack.Screen name="MainMap" component={TabNavigator} />
     </Stack.Navigator>
   );
 };
