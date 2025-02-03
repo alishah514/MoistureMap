@@ -6,6 +6,7 @@ const CommonStyles = StyleSheet.create({
   container: {flex: 1, backgroundColor: Colors.whiteColor},
   alignItemsCenter: {alignItems: 'center'},
   textAlignCenter: {textAlign: 'center'},
+  flexRow: {flexDirection: 'row'},
   // padding top
   paddingTop2: {paddingTop: wp(2)},
   paddingTop3: {paddingTop: wp(3)},
@@ -18,6 +19,9 @@ const CommonStyles = StyleSheet.create({
   marginVertical5: {marginVertical: wp(5)},
   // margin right
   marginRight3: {marginRight: wp(3)},
+
+  //padding horizontal
+  paddingHorizontal5: {paddingHorizontal: wp(5)},
 
   // common button component
   commonButton: {
@@ -95,6 +99,60 @@ const CommonStyles = StyleSheet.create({
     color: Colors.redColor,
     fontSize: wp(3.5),
     marginTop: wp(2),
+  },
+
+  // header
+  headerWhiteScreenView: {
+    backgroundColor: Colors.whiteColor,
+    borderBottomWidth: 2,
+    borderBottomColor: 'rgba(0, 0, 0, 0.2)',
+  },
+  headerBlueScreenView: {
+    backgroundColor: Colors.blueColor,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.greyColor,
+  },
+  headerMain: {
+    flexDirection: 'row',
+    height: hp(7),
+    alignItems: 'center',
+  },
+  headerBackView: {
+    width: wp(10),
+    alignItems: 'flex-end',
+  },
+  headerEachView: {width: wp(30), paddingLeft: wp(5)},
+  headerThirdView: {width: wp(30), alignItems: 'flex-end', paddingRight: wp(5)},
+  headerTitleContainer: {
+    paddingLeft: wp(10),
+  },
+  headerTitleCenter: {
+    alignItems: 'center',
+    width: '100%',
+  },
+  headerTitleText: {
+    color: Colors.blackColor,
+    fontSize: wp(5.5),
+    fontWeight: '500',
+  },
+  header80View: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: wp(5),
+    width: wp(80),
+  },
+  headerFullView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: wp(5),
+    width: wp(100),
+  },
+  headerPaddingRight10: {paddingRight: wp(10)},
+  headerRight2Views: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
 });
 

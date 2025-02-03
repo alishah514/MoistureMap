@@ -42,7 +42,7 @@ const TabNavigator = () => {
                   width: wp(5),
                   height: wp(5),
                   tintColor: focused
-                    ? Colors.activeTabIconColor
+                    ? Colors.blueColor
                     : Colors.inActiveTabIconColor,
                 }}
               />
@@ -53,9 +53,7 @@ const TabNavigator = () => {
           <Text
             style={{
               fontSize: wp(3),
-              color: focused
-                ? Colors.activeTabIconColor
-                : Colors.inActiveTabIconColor,
+              color: focused ? Colors.blueColor : Colors.inActiveTabIconColor,
             }}>
             {route.name === 'StaticMap'
               ? 'Statische'
@@ -71,10 +69,26 @@ const TabNavigator = () => {
           paddingBottom: wp(1),
         },
       })}>
-      <Tab.Screen name="StaticMap" component={StaticMapScreen} />
-      <Tab.Screen name="DynamicMap" component={DynamicMapScreen} />
-      <Tab.Screen name="Analytics" component={AnalyticScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="StaticMap"
+        component={StaticMapScreen}
+        initialParams={{title: 'Statische'}}
+      />
+      <Tab.Screen
+        name="DynamicMap"
+        component={DynamicMapScreen}
+        initialParams={{title: 'Dynamische'}}
+      />
+      <Tab.Screen
+        name="Analytics"
+        component={AnalyticScreen}
+        initialParams={{title: 'Analytik'}}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        initialParams={{title: 'Konto'}}
+      />
     </Tab.Navigator>
   );
 };
