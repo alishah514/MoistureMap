@@ -1,0 +1,22 @@
+{
+  "home": "Baile",
+  "settings": "Socruithe",
+  "welcome": "Fáilte",
+  "changeLanguage": "Athraigh Teanga",
+  "changeYourLanguage": "Athraigh do theanga",
+  "language": "Teanga",
+  "account": "Cuntas",
+  "editProfile": "Cuir próifíl in eagar",
+  "manageAccount": "Bainistigh cuntas",
+  "notifications": "Fógraí",
+  "support": "Tacaíocht",
+  "darkMode": "Modh dorcha",
+  "automatic": "Uathoibríoch",
+  "aboutApp": "Maidir leis an aip",
+  "logout": "Logáil amach",
+  "static": "Statach",
+  "dynamic": "Dinimiciúil",
+  "analytic": "Anailís",
+  "mapView": "Radharc Léarscáile",
+  "listView": "Radharc Liosta"
+}

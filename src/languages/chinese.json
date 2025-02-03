@@ -1,0 +1,22 @@
+{
+  "home": "主页",
+  "settings": "设置",
+  "welcome": "欢迎",
+  "changeLanguage": "更改语言",
+  "changeYourLanguage": "更改您的语言",
+  "language": "语言",
+  "account": "帐户",
+  "editProfile": "编辑个人资料",
+  "manageAccount": "管理帐户",
+  "notifications": "通知",
+  "support": "支持",
+  "darkMode": "黑暗模式",
+  "automatic": "自動",
+  "aboutApp": "关于应用",
+  "logout": "登出",
+  "static": "静态",
+  "dynamic": "动态",
+  "analytic": "分析",
+  "mapView": "地图视图",
+  "listView": "列表视图"
+}

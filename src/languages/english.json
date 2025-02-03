@@ -4,5 +4,19 @@
   "welcome": "Welcome",
   "changeLanguage": "Change Language",
   "changeYourLanguage": "Change your Language",
-  "language": "Language"
+  "language": "Language",
+  "account": "Accounts",
+  "editProfile": "Edit Profile",
+  "manageAccount": "Manage Account",
+  "notifications": "Notifications",
+  "support": "Support",
+  "darkMode": "Dark Mode",
+  "automatic": "Automatic",
+  "aboutApp": "About the App",
+  "logout": "Logout",
+  "static": "Static",
+  "dynamic": "Dynamic",
+  "analytic": "Analytics",
+  "mapView": "Map View",
+  "listView": "List View"
 }

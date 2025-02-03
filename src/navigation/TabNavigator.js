@@ -8,6 +8,8 @@ import DynamicMapScreen from '../screens/map/dynamic/DynamicMapScreen';
 import {wp} from '../theme/Dimensions';
 import {Colors} from '../theme/Colors';
 import CommonStyles from '../theme/CommonStyles';
+import {useSelector} from 'react-redux';
+import I18n from '../i18n/i18n';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +19,8 @@ const analyticsIcon = require('../assets/icons/stars.png');
 const profileIcon = require('../assets/icons/user.png');
 
 const TabNavigator = () => {
+  const selectedLanguage = useSelector(state => state.language.language);
+
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -56,12 +60,12 @@ const TabNavigator = () => {
               color: focused ? Colors.blueColor : Colors.inActiveTabIconColor,
             }}>
             {route.name === 'StaticMap'
-              ? 'Statische'
+              ? I18n.t('static')
               : route.name === 'DynamicMap'
-              ? 'Dynamische'
+              ? I18n.t('dynamic')
               : route.name === 'Analytics'
-              ? 'Analytik'
-              : 'Konto'}
+              ? I18n.t('analytic')
+              : I18n.t('account')}
           </Text>
         ),
         tabBarStyle: {
@@ -69,26 +73,10 @@ const TabNavigator = () => {
           paddingBottom: wp(1),
         },
       })}>
-      <Tab.Screen
-        name="StaticMap"
-        component={StaticMapScreen}
-        initialParams={{title: 'Statische'}}
-      />
-      <Tab.Screen
-        name="DynamicMap"
-        component={DynamicMapScreen}
-        initialParams={{title: 'Dynamische'}}
-      />
-      <Tab.Screen
-        name="Analytics"
-        component={AnalyticScreen}
-        initialParams={{title: 'Analytik'}}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        initialParams={{title: 'Konto'}}
-      />
+      <Tab.Screen name="StaticMap" component={StaticMapScreen} />
+      <Tab.Screen name="DynamicMap" component={DynamicMapScreen} />
+      <Tab.Screen name="Analytics" component={AnalyticScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 };

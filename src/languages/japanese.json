@@ -1,0 +1,22 @@
+{
+  "home": "ホーム",
+  "settings": "設定",
+  "welcome": "ようこそ",
+  "changeLanguage": "言語を変更",
+  "changeYourLanguage": "あなたの言語を変更",
+  "language": "言語",
+  "account": "アカウント",
+  "editProfile": "プロフィール編集",
+  "manageAccount": "アカウント管理",
+  "notifications": "通知",
+  "support": "サポート",
+  "darkMode": "ダークモード",
+  "automatic": "自動",
+  "aboutApp": "アプリについて",
+  "logout": "ログアウト",
+  "static": "静的",
+  "dynamic": "動的",
+  "analytic": "分析",
+  "mapView": "マップビュー",
+  "listView": "リストビュー"
+}

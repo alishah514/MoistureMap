@@ -1,0 +1,22 @@
+{
+  "home": "Αρχική",
+  "settings": "Ρυθμίσεις",
+  "welcome": "Καλώς ήρθατε",
+  "changeLanguage": "Αλλαγή γλώσσας",
+  "changeYourLanguage": "Αλλάξτε τη γλώσσα σας",
+  "language": "Γλώσσα",
+  "account": "Λογαριασμός",
+  "editProfile": "Επεξεργασία προφίλ",
+  "manageAccount": "Διαχείριση λογαριασμού",
+  "notifications": "Ειδοποιήσεις",
+  "support": "Υποστήριξη",
+  "darkMode": "Σκοτεινός τρόπος",
+  "automatic": "Αυτόματο",
+  "aboutApp": "Σχετικά με την εφαρμογή",
+  "logout": "Αποσύνδεση",
+  "static": "Στατικός",
+  "dynamic": "Δυναμικός",
+  "analytic": "Ανάλυση",
+  "mapView": "Εμφάνιση Χάρτη",
+  "listView": "Λίστα Εμφάνιση"
+}

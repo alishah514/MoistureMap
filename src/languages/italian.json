@@ -1,0 +1,22 @@
+{
+  "home": "Casa",
+  "settings": "Impostazioni",
+  "welcome": "Benvenuto",
+  "changeLanguage": "Cambia lingua",
+  "changeYourLanguage": "Cambia la tua lingua",
+  "language": "Lingua",
+  "account": "Account",
+  "editProfile": "Modifica profilo",
+  "manageAccount": "Gestisci account",
+  "notifications": "Notifiche",
+  "support": "Supporto",
+  "darkMode": "Modalità scura",
+  "automatic": "Automatico",
+  "aboutApp": "Informazioni sull'app",
+  "logout": "Logout",
+  "static": "Statico",
+  "dynamic": "Dinamico",
+  "analytic": "Analitica",
+  "mapView": "Vista mappa",
+  "listView": "Vista elenco"
+}

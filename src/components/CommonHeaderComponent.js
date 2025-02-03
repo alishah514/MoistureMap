@@ -25,7 +25,8 @@ const CommonHeaderComponent = props => {
         onPress={props?.onLeftIconPressed && props?.onLeftIconPressed}>
         {props?.leftIcon && props?.leftIcon}
       </TouchableOpacity>
-      <View style={CommonStyles.headerTitleCenter}>
+      <View
+        style={{alignItems: 'flex-start', width: '100%', paddingLeft: wp(3)}}>
         <Text style={CommonStyles.headerTitleText}>
           {truncateTitle(props?.title, 20)}
         </Text>

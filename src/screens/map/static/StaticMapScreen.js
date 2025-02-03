@@ -3,8 +3,12 @@ import {View, Text} from 'react-native';
 import CommonSafeAreaViewComponent from '../../../components/CommonSafeAreaViewComponent';
 import TabShifting from '../components/TabShifting';
 import styles from '../styles';
+import {useSelector} from 'react-redux';
+import I18n from '../../../i18n/i18n';
 
 export default function StaticMapScreen() {
+  const selectedLanguage = useSelector(state => state.language.language);
+
   const [activeTab, setActiveTab] = useState('map');
 
   return (
@@ -15,7 +19,7 @@ export default function StaticMapScreen() {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
           tabName="map"
-          label="Kartenansicht"
+          label={I18n.t('mapView')}
           icon={require('../../../assets/icons/map.png')}
           inactiveIcon={require('../../../assets/icons/map-black.png')}
         />
@@ -23,7 +27,7 @@ export default function StaticMapScreen() {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
           tabName="list"
-          label="Listenansicht"
+          label={I18n.t('listView')}
           icon={require('../../../assets/icons/menu.png')}
           inactiveIcon={require('../../../assets/icons/menu-black.png')}
         />

@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import CommonSafeAreaViewComponent from '../../components/CommonSafeAreaViewComponent';
 import CommonHeaderComponent from '../../components/CommonHeaderComponent';
@@ -9,11 +9,19 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 import CommonStyles from '../../theme/CommonStyles';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
+import {useSelector} from 'react-redux';
+import {languages} from '../../constants/language';
+import I18n from '../../i18n/i18n';
 
-export default function ProfileScreen({route}) {
+export default function ProfileScreen({navigation}) {
+  const selectedLanguage = useSelector(state => state.language.language);
+  const selectedLanguageName =
+    languages.find(lang => lang.code === selectedLanguage)?.name ||
+    'Deutsch (DE)';
+
   return (
     <CommonSafeAreaViewComponent>
-      <CommonHeaderComponent title={route?.params?.title || 'Profile'} />
+      <CommonHeaderComponent title={I18n.t('account') || 'Profile'} />
       <View style={styles.profileMainContainer}>
         <View style={styles.profileContainer}>
           <View style={styles.profileImageContainer}>
@@ -29,42 +37,56 @@ export default function ProfileScreen({route}) {
 
           <View style={styles.profileBox}>
             <View style={styles.profileEditIconContainer}>
-              <Text>Profil bearbeiten</Text>
+              <Text style={{textAlign: 'center'}}>{I18n.t('editProfile')}</Text>
             </View>
           </View>
         </View>
 
         <View style={styles.profileNavigatorContainer}>
-          <Text style={styles.profileNavigatorTitleText}>Konto verwalten</Text>
+          <Text style={styles.profileNavigatorTitleText}>
+            {I18n.t('manageAccount')}
+          </Text>
         </View>
 
         <View style={styles.profileOptionsContainer}>
           {[
             {
               icon: require('../../assets/icons/person.png'),
-              label: 'Profil bearbeiten',
+              label: I18n.t('editProfile'),
+              onPress: () => navigation.navigate('EditProfile'),
             },
             {
               icon: require('../../assets/icons/bell.png'),
-              label: 'Benachrichtigung',
+              label: I18n.t('notifications'),
+              onPress: () => navigation.navigate('Notifications'),
             },
-            {icon: require('../../assets/icons/headset.png'), label: 'Support'},
+            {
+              icon: require('../../assets/icons/headset.png'),
+              label: I18n.t('support'),
+              onPress: () => navigation.navigate('Support'),
+            },
             {
               icon: require('../../assets/icons/moon.png'),
-              label: 'Dunkelmodus',
+              label: I18n.t('darkMode'),
               extra: 'Automatisch',
+              onPress: () => navigation.navigate('DarkMode'),
             },
             {
               icon: require('../../assets/icons/language.png'),
-              label: 'Sprache',
-              extra: 'Deutsch (DE)',
+              label: I18n.t('language'),
+              extra: selectedLanguageName,
+              onPress: () => navigation.navigate('Language'),
             },
             {
               icon: require('../../assets/icons/info.png'),
-              label: 'Über die App',
+              label: I18n.t('aboutApp'),
+              onPress: () => navigation.navigate('About'),
             },
           ].map((item, index) => (
-            <View key={index} style={CommonStyles.paddingHorizontal5}>
+            <TouchableOpacity
+              onPress={item.onPress ? item.onPress : () => {}}
+              key={index}
+              style={CommonStyles.paddingHorizontal5}>
               <View style={styles.profileNavigatorOptionRow}>
                 <View style={styles.profileNavigatorOptionLeft}>
                   <Image
@@ -86,14 +108,14 @@ export default function ProfileScreen({route}) {
                   />
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           ))}
         </View>
       </View>
 
       <View style={styles.profileButtonContainer}>
         <CommonButtonComponent
-          title={'Abmelden'}
+          title={I18n.t('logout')}
           backgroundColor={'#FFECEB'}
           titleColor={'#B80900'}
         />

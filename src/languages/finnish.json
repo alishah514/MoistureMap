@@ -1,0 +1,22 @@
+{
+  "home": "Koti",
+  "settings": "Asetukset",
+  "welcome": "Tervetuloa",
+  "changeLanguage": "Vaihda kieli",
+  "changeYourLanguage": "Vaihda kielesi",
+  "language": "Kieli",
+  "account": "Tili",
+  "editProfile": "Muokkaa profiilia",
+  "manageAccount": "Hallinnoi tiliä",
+  "notifications": "Ilmoitukset",
+  "support": "Tuki",
+  "darkMode": "Tumma tila",
+  "automatic": "Automaattinen",
+  "aboutApp": "Tietoa sovelluksesta",
+  "logout": "Kirjaudu ulos",
+  "static": "Staattinen",
+  "dynamic": "Dynaaminen",
+  "analytic": "Analytiikka",
+  "mapView": "Karttanäkymä",
+  "listView": "Listanäkymä"
+}

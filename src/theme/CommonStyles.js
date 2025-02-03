@@ -132,14 +132,15 @@ const CommonStyles = StyleSheet.create({
   },
   headerTitleText: {
     color: Colors.blackColor,
-    fontSize: wp(5.5),
-    fontWeight: '500',
+    fontSize: wp(4.5),
+    fontWeight: '600',
   },
   header80View: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingLeft: wp(5),
     width: wp(80),
+    alignItems: 'center',
   },
   headerFullView: {
     flexDirection: 'row',

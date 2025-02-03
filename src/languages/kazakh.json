@@ -1,0 +1,22 @@
+{
+  "home": "Басты бет",
+  "settings": "Параметрлер",
+  "welcome": "Қош келдіңіз",
+  "changeLanguage": "Тілді өзгерту",
+  "changeYourLanguage": "Тіліңізді өзгертіңіз",
+  "language": "Тіл",
+  "account": "Аккаунт",
+  "editProfile": "Профильді өңдеу",
+  "manageAccount": "Аккаунтты басқару",
+  "notifications": "Хабарламалар",
+  "support": "Қолдау",
+  "darkMode": "Қараңғы режим",
+  "automatic": "Автоматты",
+  "aboutApp": "Қосымша туралы",
+  "logout": "Шығу",
+  "static": "Статикалық",
+  "dynamic": "Динамикалық",
+  "analytic": "Аналитика",
+  "mapView": "Карта көрінісі",
+  "listView": "Тізім көрінісі"
+}

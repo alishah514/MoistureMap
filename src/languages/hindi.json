@@ -1,0 +1,22 @@
+{
+  "home": "होम",
+  "settings": "सेटिंग्स",
+  "welcome": "स्वागत है",
+  "changeLanguage": "भाषा बदलें",
+  "changeYourLanguage": "अपनी भाषा बदलें",
+  "language": "भाषा",
+  "account": "खाता",
+  "editProfile": "प्रोफाइल संपादित करें",
+  "manageAccount": "खाता प्रबंधित करें",
+  "notifications": "सूचनाएं",
+  "support": "सहायता",
+  "darkMode": "डार्क मोड",
+  "automatic": "स्वचालित",
+  "aboutApp": "ऐप के बारे में",
+  "logout": "लॉगआउट",
+  "static": "स्थैतिक",
+  "dynamic": "डायनेमिक",
+  "analytic": "विश्लेषण",
+  "mapView": "मानचित्र दृश्य",
+  "listView": "सूची दृश्य"
+}
