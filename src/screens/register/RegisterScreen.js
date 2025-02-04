@@ -11,8 +11,12 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
 import DividerWithText from '../../components/DividerWithTextComponent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useSelector} from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 export default function RegisterScreen({navigation}) {
+  const selectedLanguage = useSelector(state => state.language.language);
+
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
 
@@ -24,9 +28,9 @@ export default function RegisterScreen({navigation}) {
       <ScrollView contentContainerStyle={CommonStyles.marginVertical5}>
         <View style={styles.container}>
           <View style={styles.registerTitleView}>
-            <Text style={styles.appTitle}>Ein Konto erstellen</Text>
+            <Text style={styles.appTitle}>{I18n.t('createAccount')}</Text>
             <Text style={styles.loginDescription}>
-              Geben Sie Ihre Kontodaten ein
+              {I18n.t('enterAccountDetails')}
             </Text>
           </View>
           <View
@@ -35,8 +39,8 @@ export default function RegisterScreen({navigation}) {
               CommonStyles.alignItemsCenter,
             ]}>
             <CommonInputFieldComponent
-              label="E-Mail-Adresse"
-              placeholder="name@beispiel.com"
+              label={I18n.t('email')}
+              placeholder={I18n.t('enterEmail')}
               value={email}
               onChangeText={setEmail}
               keyboardType="email-address"
@@ -51,8 +55,8 @@ export default function RegisterScreen({navigation}) {
               validationType="email"
             />
             <CommonInputFieldComponent
-              label="Benutzername"
-              placeholder="Geben Sie Ihren Namen ein"
+              label={I18n.t('username')}
+              placeholder={I18n.t('enterUsername')}
               value={name}
               onChangeText={setName}
               vectorIcon={
@@ -66,8 +70,8 @@ export default function RegisterScreen({navigation}) {
               validationType="email"
             />
             <CommonInputFieldComponent
-              label="Neues Passwort"
-              placeholder="Geben Sie ein neues Passwort ein"
+              label={I18n.t('newPassword')}
+              placeholder={I18n.t('newPassword')}
               value={newPassword}
               onChangeText={setNewPassword}
               secureTextEntry
@@ -75,8 +79,8 @@ export default function RegisterScreen({navigation}) {
               validationType="password"
             />
             <CommonInputFieldComponent
-              label="Bestätigen Sie das neue Passwort"
-              placeholder="Geben Sie das neue Passwort zur Bestätigung ein"
+              label={I18n.t('confirmNewPassword')}
+              placeholder={I18n.t('confirmNewPassword')}
               value={confirmPassword}
               onChangeText={setConfirmPassword}
               secureTextEntry
@@ -86,7 +90,7 @@ export default function RegisterScreen({navigation}) {
             />
 
             <CommonButtonComponent
-              title={'Fortfahren'}
+              title={I18n.t('continue')}
               onPress={() => navigation.navigate('Verification')}
               style={{marginTop: wp(3)}}
               vectorIcon={
@@ -101,7 +105,7 @@ export default function RegisterScreen({navigation}) {
             />
             <DividerWithText />
             <CommonButtonComponent
-              title={'Melden Sie sich mit der Telefonnummer an'}
+              title={I18n.t('alreadyHaveAccount')}
               onPress={() => console.log('Login')}
               backgroundColor={Colors.greyButtonColor}
               titleColor={Colors.blackColor}
@@ -117,13 +121,11 @@ export default function RegisterScreen({navigation}) {
             />
             <View style={styles.bottomDescriptionView}>
               <Text style={styles.bottomDescriptionText}>
-                Typografie Durch die Fortsetzung stimmen Sie den
-                Nutzungsbedingungen und der Datenschutzrichtlinie von App Name
-                zu.
+                {I18n.t('termsAgreement')}
               </Text>
               <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.signupText}>
-                  Haben Sie bereits ein Konto? Melden Sie sich an.
+                  {I18n.t('alreadyHaveAccount')}
                 </Text>
               </TouchableOpacity>
             </View>

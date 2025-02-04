@@ -13,10 +13,14 @@ import CommonStyles from '../../theme/CommonStyles';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from '../../theme/Colors';
+import {useSelector} from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 const CELL_COUNT = 5;
 
 export default function VerificationScreen({navigation}) {
+  const selectedLanguage = useSelector(state => state.language.language);
+
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -31,10 +35,9 @@ export default function VerificationScreen({navigation}) {
       <View style={styles.container}>
         <View style={styles.twoSeparateViews}>
           <View style={styles.registerTitleView}>
-            <Text style={styles.appTitle}>Überprüfen Sie Ihre E-Mail</Text>
+            <Text style={styles.appTitle}>{I18n.t('verifyEmail')}</Text>
             <Text style={[styles.loginDescription, CommonStyles.paddingTop3]}>
-              Bitte geben Sie den Bestätigungscode ein, den Sie per E-Mail
-              erhalten haben, um fortzufahren.
+              {I18n.t('enterConfirmationCode')}
             </Text>
             <View style={styles.codeFieldView}>
               <CodeField
@@ -59,11 +62,11 @@ export default function VerificationScreen({navigation}) {
               />
             </View>
             <Text style={[styles.expiryText, styles.loginDescription]}>
-              Dieser Code läuft in 30 Minuten ab.
+              {I18n.t('codeExpiresIn')}
             </Text>
 
             <CommonButtonComponent
-              title={'Code überprüfen'}
+              title={I18n.t('verifyCode')}
               onPress={() => navigation.navigate('Location')}
               style={[
                 CommonStyles.marginVertical5,
@@ -83,19 +86,16 @@ export default function VerificationScreen({navigation}) {
                 color={Colors.blackColor}
                 style={CommonStyles.marginRight3}
               />
-              <Text style={styles.miniButtonText}>Zurück zur Anmeldung</Text>
+              <Text style={styles.miniButtonText}>{I18n.t('backToLogin')}</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.registerTitleView2}>
             <Text
               style={[styles.loginDescription, CommonStyles.textAlignCenter]}>
-              Durch die Fortsetzung stimmen Sie den Nutzungsbedingungen und der
-              Datenschutzrichtlinie von App Name zu.
+              {I18n.t('agreeTermsPrivacy')}
             </Text>
-            <Text style={styles.miniText}>
-              Haben Sie bereits ein Konto? Melden Sie sich an.
-            </Text>
+            <Text style={styles.miniText}>{I18n.t('alreadyHaveAccount')}</Text>
           </View>
         </View>
       </View>

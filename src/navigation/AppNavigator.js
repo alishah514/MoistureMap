@@ -9,6 +9,7 @@ import LocationScreen from '../screens/location/LocationScreen';
 import TabNavigator from './TabNavigator';
 import LanguageScreen from '../screens/language/LanguageScreen';
 import EditProfileScreen from '../screens/profile/EditProfileScreen';
+import ThemeScreen from '../screens/theme/ThemeScreen';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ const AppNavigator = () => {
       <Stack.Screen name="MainMap" component={TabNavigator} />
       <Stack.Screen name="Language" component={LanguageScreen} />
       <Stack.Screen name="Edit Profile" component={EditProfileScreen} />
+      <Stack.Screen name="Theme" component={ThemeScreen} />
     </Stack.Navigator>
   );
 };

@@ -11,9 +11,15 @@ import CommonButtonComponent from '../../components/CommonButtonComponent';
 import {useSelector} from 'react-redux';
 import {languages} from '../../constants/language';
 import I18n from '../../i18n/i18n';
+import themes from '../../constants/themes';
 
 export default function ProfileScreen({navigation}) {
   const selectedLanguage = useSelector(state => state.language.language);
+  const selectedTheme = useSelector(state => state.theme.theme);
+
+  const selectedThemeName =
+    themes.find(theme => theme.code === selectedTheme)?.name || 'Automatic';
+
   const selectedLanguageName =
     languages.find(lang => lang.code === selectedLanguage)?.name ||
     'Deutsch (DE)';
@@ -34,13 +40,15 @@ export default function ProfileScreen({navigation}) {
             <Text style={styles.profileSubtitle}>meineemail@domain.de</Text>
           </View>
 
-          <View style={styles.profileBox}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Edit Profile')}
+            style={styles.profileBox}>
             <View style={styles.profileEditIconContainer}>
               <Text style={CommonStyles.textAlignCenter}>
                 {I18n.t('editProfile')}
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.profileNavigatorContainer}>
@@ -69,8 +77,8 @@ export default function ProfileScreen({navigation}) {
             {
               icon: require('../../assets/icons/moon.png'),
               label: I18n.t('darkMode'),
-              extra: 'Automatisch',
-              onPress: () => console.log('Dark Mode'),
+              extra: selectedThemeName,
+              onPress: () => navigation.navigate('Theme'),
             },
             {
               icon: require('../../assets/icons/language.png'),

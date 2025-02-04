@@ -5,6 +5,7 @@ import styles from './styles';
 import CommonStyles from '../../theme/CommonStyles';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
 import {Colors} from '../../theme/Colors';
+import I18n from '../../i18n/i18n'; // import i18n for translations
 
 export default function LocationScreen({navigation}) {
   return (
@@ -15,18 +16,14 @@ export default function LocationScreen({navigation}) {
           style={styles.entryImage}
         />
         <View style={[CommonStyles.paddingTop15, styles.viewWidth]}>
-          <Text style={styles.title}>Standortdienste aktivieren</Text>
-          <Text style={styles.text}>
-            Erlauben Sie den Zugriff auf Ihren Standort, um personalisierte
-            Empfehlungen und Echtzeit-Updates zu nahegelegenen Zielen zu
-            erhalten.
-          </Text>
+          <Text style={styles.title}>{I18n.t('enableLocationServices')}</Text>
+          <Text style={styles.text}>{I18n.t('allowLocationAccess')}</Text>
         </View>
       </View>
 
       <View style={styles.buttonContainer}>
         <CommonButtonComponent
-          title={'Standortzugriff erlauben'}
+          title={I18n.t('allowLocationAccessBtn')}
           onPress={() => navigation.navigate('MainMap')}
         />
       </View>
@@ -34,7 +31,7 @@ export default function LocationScreen({navigation}) {
         <CommonButtonComponent
           backgroundColor={Colors.greyButtonColor}
           titleColor={Colors.blackColor}
-          title={'Jetzt überspringen'}
+          title={I18n.t('skipNow')}
           onPress={() => navigation.navigate('NextScreen')}
         />
       </View>

@@ -11,8 +11,12 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
 import DividerWithText from '../../components/DividerWithTextComponent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useSelector} from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 export default function LoginScreen({navigation}) {
+  const selectedLanguage = useSelector(state => state.language.language);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,15 +31,13 @@ export default function LoginScreen({navigation}) {
           <Text style={styles.appTitle}>AppName</Text>
         </View>
         <View style={styles.formView}>
-          <Text style={styles.loginTitle}>Einloggen</Text>
-          <Text style={styles.loginDescription}>
-            Willkommen zurück! Bitte loggen Sie sich mit Ihren Zugangsdaten ein
-          </Text>
+          <Text style={styles.loginTitle}>{I18n.t('login')}</Text>
+          <Text style={styles.loginDescription}>{I18n.t('welcomeBack')}</Text>
         </View>
         <View style={[CommonStyles.paddingTop5, CommonStyles.alignItemsCenter]}>
           <CommonInputFieldComponent
-            label="E-Mail-Adresse"
-            placeholder="name@beispiel.com"
+            label={I18n.t('email')}
+            placeholder={I18n.t('enterEmail')}
             value={email}
             onChangeText={setEmail}
             keyboardType="email-address"
@@ -46,7 +48,7 @@ export default function LoginScreen({navigation}) {
             validationType="email"
           />
           <CommonInputFieldComponent
-            label="Passwort"
+            label={I18n.t('password')}
             placeholder="********"
             value={password}
             onChangeText={setPassword}
@@ -55,7 +57,7 @@ export default function LoginScreen({navigation}) {
             validationType="password"
           />
           <CommonButtonComponent
-            title={'Einloggen'}
+            title={I18n.t('login')}
             onPress={() => console.log('abxc')}
             style={{marginTop: wp(3)}}
             vectorIcon={
@@ -70,7 +72,7 @@ export default function LoginScreen({navigation}) {
           />
           <DividerWithText />
           <CommonButtonComponent
-            title={'Mit Telefon einloggen'}
+            title={I18n.t('loginWithPhone')}
             onPress={() => console.log('Login')}
             backgroundColor={Colors.greyButtonColor}
             titleColor={Colors.blackColor}
@@ -86,13 +88,10 @@ export default function LoginScreen({navigation}) {
           />
           <View style={styles.bottomDescriptionView}>
             <Text style={styles.bottomDescriptionText}>
-              Typografie Durch die Fortsetzung stimmen Sie den
-              Nutzungsbedingungen und der Datenschutzrichtlinie von App Name zu.
+              {I18n.t('termsAgreement')}
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-              <Text style={styles.signupText}>
-                Haben Sie noch kein Konto? Jetzt registrieren!
-              </Text>
+              <Text style={styles.signupText}>{I18n.t('dontHaveAccount')}</Text>
             </TouchableOpacity>
           </View>
         </View>

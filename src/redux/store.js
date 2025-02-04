@@ -6,6 +6,7 @@ import RootReducer from './reducers/RootReducer';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
+  whiteList: ['language', 'theme'],
 };
 
 const persistedReducer = persistReducer(persistConfig, RootReducer);
