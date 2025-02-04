@@ -18,5 +18,16 @@
   "dynamic": "Dynamic",
   "analytic": "Analytics",
   "mapView": "Map View",
-  "listView": "List View"
+  "listView": "List View",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "companyName": "Company Name",
+  "email": "E-Mail Address",
+  "telephone": "Telephone",
+  "enterFirstName": "Enter First Name",
+  "enterLastName": "Enter Last Name",
+  "enterCompanyName": "Enter Company Name",
+  "enterEmail": "Enter E-Mail Address",
+  "enterTelephone": "Enter Telephone Number",
+  "update": "Update"
 }

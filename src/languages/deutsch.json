@@ -1,11 +1,11 @@
 {
-  "home": "Zuhause",
+  "home": "Startseite",
   "settings": "Einstellungen",
   "welcome": "Willkommen",
   "changeLanguage": "Sprache ändern",
   "changeYourLanguage": "Ändern Sie Ihre Sprache",
   "language": "Sprache",
-  "account": "Konto",
+  "account": "Konten",
   "editProfile": "Profil bearbeiten",
   "manageAccount": "Konto verwalten",
   "notifications": "Benachrichtigungen",
@@ -16,7 +16,19 @@
   "logout": "Abmelden",
   "static": "Statisch",
   "dynamic": "Dynamisch",
-  "analytic": "Analytik",
+  "analytic": "Analyse",
   "mapView": "Kartenansicht",
-  "listView": "Listenansicht"
+  "listView": "Listenansicht",
+
+  "firstName": "Vorname",
+  "lastName": "Nachname",
+  "companyName": "Firmenname",
+  "email": "E-Mail-Adresse",
+  "telephone": "Telefon",
+  "enterFirstName": "Vorname eingeben",
+  "enterLastName": "Nachname eingeben",
+  "enterCompanyName": "Firmenname eingeben",
+  "enterEmail": "E-Mail-Adresse eingeben",
+  "enterTelephone": "Telefonnummer eingeben",
+  "update": "Aktualisieren"
 }

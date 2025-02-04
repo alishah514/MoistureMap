@@ -5,9 +5,9 @@
   "changeLanguage": "Тілді өзгерту",
   "changeYourLanguage": "Тіліңізді өзгертіңіз",
   "language": "Тіл",
-  "account": "Аккаунт",
+  "account": "Есептер",
   "editProfile": "Профильді өңдеу",
-  "manageAccount": "Аккаунтты басқару",
+  "manageAccount": "Есепті басқару",
   "notifications": "Хабарламалар",
   "support": "Қолдау",
   "darkMode": "Қараңғы режим",
@@ -18,5 +18,17 @@
   "dynamic": "Динамикалық",
   "analytic": "Аналитика",
   "mapView": "Карта көрінісі",
-  "listView": "Тізім көрінісі"
+  "listView": "Тізім көрінісі",
+
+  "firstName": "Аты",
+  "lastName": "Тегі",
+  "companyName": "Компанияның аты",
+  "email": "Электрондық пошта мекенжайы",
+  "telephone": "Телефон",
+  "enterFirstName": "Аты енгізіңіз",
+  "enterLastName": "Тегіңізді енгізіңіз",
+  "enterCompanyName": "Компанияның атын енгізіңіз",
+  "enterEmail": "Электрондық пошта мекенжайын енгізіңіз",
+  "enterTelephone": "Телефон нөмірін енгізіңіз",
+  "update": "Жаңарту"
 }

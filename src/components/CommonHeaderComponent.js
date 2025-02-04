@@ -15,7 +15,7 @@ const CommonHeaderComponent = props => {
     <View
       style={{alignItems: 'flex-start', width: '100%', paddingLeft: wp(10)}}>
       <Text style={CommonStyles.headerTitleText}>
-        {truncateTitle(props?.title, 13)}
+        {truncateTitle(props?.title, 25)}
       </Text>
     </View>
   );
@@ -28,7 +28,7 @@ const CommonHeaderComponent = props => {
       <View
         style={{alignItems: 'flex-start', width: '100%', paddingLeft: wp(3)}}>
         <Text style={CommonStyles.headerTitleText}>
-          {truncateTitle(props?.title, 20)}
+          {truncateTitle(props?.title, 25)}
         </Text>
       </View>
     </View>

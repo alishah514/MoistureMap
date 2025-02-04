@@ -5,7 +5,6 @@ import CommonHeaderComponent from '../../components/CommonHeaderComponent';
 import {wp} from '../../theme/Dimensions';
 import {Colors} from '../../theme/Colors';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
 import styles from './styles';
 import CommonStyles from '../../theme/CommonStyles';
 import CommonButtonComponent from '../../components/CommonButtonComponent';
@@ -22,7 +21,7 @@ export default function ProfileScreen({navigation}) {
   return (
     <CommonSafeAreaViewComponent>
       <CommonHeaderComponent title={I18n.t('account') || 'Profile'} />
-      <View style={styles.profileMainContainer}>
+      <View style={CommonStyles.container}>
         <View style={styles.profileContainer}>
           <View style={styles.profileImageContainer}>
             <Image
@@ -37,7 +36,9 @@ export default function ProfileScreen({navigation}) {
 
           <View style={styles.profileBox}>
             <View style={styles.profileEditIconContainer}>
-              <Text style={{textAlign: 'center'}}>{I18n.t('editProfile')}</Text>
+              <Text style={CommonStyles.textAlignCenter}>
+                {I18n.t('editProfile')}
+              </Text>
             </View>
           </View>
         </View>
@@ -53,23 +54,23 @@ export default function ProfileScreen({navigation}) {
             {
               icon: require('../../assets/icons/person.png'),
               label: I18n.t('editProfile'),
-              onPress: () => navigation.navigate('EditProfile'),
+              onPress: () => navigation.navigate('Edit Profile'),
             },
             {
               icon: require('../../assets/icons/bell.png'),
               label: I18n.t('notifications'),
-              onPress: () => navigation.navigate('Notifications'),
+              onPress: () => console.log('Notifications'),
             },
             {
               icon: require('../../assets/icons/headset.png'),
               label: I18n.t('support'),
-              onPress: () => navigation.navigate('Support'),
+              onPress: () => console.log('Support'),
             },
             {
               icon: require('../../assets/icons/moon.png'),
               label: I18n.t('darkMode'),
               extra: 'Automatisch',
-              onPress: () => navigation.navigate('DarkMode'),
+              onPress: () => console.log('Dark Mode'),
             },
             {
               icon: require('../../assets/icons/language.png'),
@@ -80,7 +81,7 @@ export default function ProfileScreen({navigation}) {
             {
               icon: require('../../assets/icons/info.png'),
               label: I18n.t('aboutApp'),
-              onPress: () => navigation.navigate('About'),
+              onPress: () => console.log('About Us'),
             },
           ].map((item, index) => (
             <TouchableOpacity

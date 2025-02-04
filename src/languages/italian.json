@@ -1,11 +1,11 @@
 {
-  "home": "Casa",
+  "home": "Home",
   "settings": "Impostazioni",
   "welcome": "Benvenuto",
   "changeLanguage": "Cambia lingua",
   "changeYourLanguage": "Cambia la tua lingua",
   "language": "Lingua",
-  "account": "Account",
+  "account": "Conti",
   "editProfile": "Modifica profilo",
   "manageAccount": "Gestisci account",
   "notifications": "Notifiche",
@@ -16,7 +16,19 @@
   "logout": "Logout",
   "static": "Statico",
   "dynamic": "Dinamico",
-  "analytic": "Analitica",
+  "analytic": "Analisi",
   "mapView": "Vista mappa",
-  "listView": "Vista elenco"
+  "listView": "Vista lista",
+
+  "firstName": "Nome",
+  "lastName": "Cognome",
+  "companyName": "Nome dell'azienda",
+  "email": "Indirizzo e-mail",
+  "telephone": "Telefono",
+  "enterFirstName": "Inserisci il nome",
+  "enterLastName": "Inserisci il cognome",
+  "enterCompanyName": "Inserisci il nome dell'azienda",
+  "enterEmail": "Inserisci l'indirizzo e-mail",
+  "enterTelephone": "Inserisci il numero di telefono",
+  "update": "Aggiorna"
 }

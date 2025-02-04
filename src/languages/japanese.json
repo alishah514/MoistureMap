@@ -3,7 +3,7 @@
   "settings": "設定",
   "welcome": "ようこそ",
   "changeLanguage": "言語を変更",
-  "changeYourLanguage": "あなたの言語を変更",
+  "changeYourLanguage": "言語を変更する",
   "language": "言語",
   "account": "アカウント",
   "editProfile": "プロフィール編集",
@@ -17,6 +17,18 @@
   "static": "静的",
   "dynamic": "動的",
   "analytic": "分析",
-  "mapView": "マップビュー",
-  "listView": "リストビュー"
+  "mapView": "地図ビュー",
+  "listView": "リストビュー",
+
+  "firstName": "名前",
+  "lastName": "苗字",
+  "companyName": "会社名",
+  "email": "メールアドレス",
+  "telephone": "電話",
+  "enterFirstName": "名前を入力",
+  "enterLastName": "苗字を入力",
+  "enterCompanyName": "会社名を入力",
+  "enterEmail": "メールアドレスを入力",
+  "enterTelephone": "電話番号を入力",
+  "update": "更新"
 }

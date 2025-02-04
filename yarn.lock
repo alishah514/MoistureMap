@@ -2996,6 +2996,7 @@ __metadata:
     react-native-confirmation-code-field: ^7.4.0
     react-native-gesture-handler: ^2.22.1
     react-native-i18n: ^2.0.15
+    react-native-image-crop-picker: ^0.42.0
     react-native-reanimated: ^3.16.7
     react-native-safe-area-context: ^5.1.0
     react-native-screens: ^4.5.0
@@ -8177,6 +8178,15 @@ __metadata:
   dependencies:
     i18n-js: 3.0.11
   checksum: 8ea3500556c6a55a8e3a0fc838217a9d27bf541e2d6d9cefe5293889859af8fb494d1b8b25de7e80f6086023128814af9b22b6636aa2733443ae1c7118338420
+  languageName: node
+  linkType: hard
+
+"react-native-image-crop-picker@npm:^0.42.0":
+  version: 0.42.0
+  resolution: "react-native-image-crop-picker@npm:0.42.0"
+  peerDependencies:
+    react-native: ">=0.40.0"
+  checksum: 40d13e9a610d15b0bbaf2a6ec6de476caffc941e7d70d9c2254c101f2f65b6fa3f2ebf7669a44c30508adc130c2ea7ddae9c9c9d35dc9468ebad4139833fe5a1
   languageName: node
   linkType: hard
 

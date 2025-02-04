@@ -14,6 +14,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
   },
+  profileContainer2: {
+    flexDirection: 'row',
+    width: wp(100),
+    paddingVertical: wp(5),
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    backgroundColor: Colors.greyButtonColor,
+  },
   profileImageContainer: {
     width: wp(20),
     alignItems: 'center',
@@ -21,9 +30,14 @@ const styles = StyleSheet.create({
   profileImage: {
     width: wp(15),
     height: wp(15),
+    borderRadius: wp(7),
   },
   profileTextContainer: {
     width: wp(45),
+    alignItems: 'flex-start',
+  },
+  profileTextContainer2: {
+    width: wp(65),
     alignItems: 'flex-start',
   },
   profileTitle: {
@@ -42,6 +56,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: wp(2),
   },
+  penBox: {
+    width: wp(10),
+    alignItems: 'center',
+    marginRight: wp(2),
+  },
+  penIcon: {width: wp(4), height: wp(4)},
   profileEditIconContainer: {
     height: hp(4),
     paddingHorizontal: wp(2),
@@ -101,6 +121,7 @@ const styles = StyleSheet.create({
     paddingBottom: wp(5),
     alignSelf: 'center',
   },
+  inputFieldsMainView: {width: wp(90), marginTop: wp(5), alignSelf: 'center'},
 });
 
 export default styles;
